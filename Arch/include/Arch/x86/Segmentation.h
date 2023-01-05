@@ -57,32 +57,6 @@ struct DescriptorTableRegister<Mode::longMode>
 static_assert(sizeof(DescriptorTableRegister<Mode::longMode>) == sizeof(unsigned short) + sizeof(unsigned long long));
 
 
-template <Mode mode>
-struct SystemSegmentDescriptorType;
-
-template <>
-struct SystemSegmentDescriptorType<Mode::legacy>
-{
-    enum class Type
-    {
-        Reserved0,
-        TypeAvailable16BitTss,
-        TypeLdt,
-        TypeBusy16BitTss,
-        Type16BitCallGate,
-        TypeTaskGate,
-        Type16BitInterruptGate,
-        Type16BitTrapGate,
-        Reserved1,
-        TypeAvailable32BitTss,
-        Reserved2,
-        TypeBusy32BitTss,
-        Type32BitCallGate,
-        Reserved3,
-        Type32BitInterruptGate,
-        Type32BitTrapGate
-    };
-};
 
 template <Mode mode>
 struct Descriptor;
