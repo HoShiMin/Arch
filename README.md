@@ -2,7 +2,7 @@
 It's a bit-perfect (and maybe the most complete in some cases) bunch of architectural headers for i386/AMD64 platform written in C++17.
 
 ### 📜 Supported structures and layouts:
-* Memory paging with all possible regimes and page sizes:
+* **Memory paging** with all possible regimes and page sizes:
   - Regimes:
     - Legacy Non-PAE with and without CR4.PSE (4Kb and 4Mb pages).
     - Legacy PAE (4Kb and 2Mb pages).
@@ -14,24 +14,24 @@ It's a bit-perfect (and maybe the most complete in some cases) bunch of architec
     - PDP table with PDPE entries (also known as PDPT table and PDPTE entries in Intel terms) including PageSize forms.
     - PD table with PDE entries including PageSize forms.
     - PT table with PTE entries.
-* Segmentation:
+* **Segmentation**:
   - GDT - Global Descriptor Table.
   - IDT - Interrupt Descriptor Table.
   - LDT - Local Descriptor Table.
   - TSS - Task State Segment.
   - Segment selector (format of CS, DS, GS, FS, ES, SS and TR registers).
   - Descriptor table register (IDTR, GDTR and LDTR registers).
-* System registers:
+* **System registers**:
   - EFlags.
   - Control registers: CR0, CR, CR3, CR4, CR8.
   - Debug registers: DR0..DR7.
-* Interrupt vectors.
-* CPUID with some leaves specific for Intel and AMD.
-* MSRs (Model Specific Registers) for Intel and AMD:
+* **Interrupt vectors**.
+* **CPUID** with some leaves specific for Intel and AMD.
+* **MSRs** (Model Specific Registers) for Intel and AMD:
   - All possible MSR addresses for Intel and AMD.
   - Layouts for some of them (including Memory Type Range Registers (MTRRs) for Intel).
-* Architectural intrinsics for MSVC and CLang.
-* Virtualization:
+* Architectural **intrinsics** for MSVC and CLang.
+* **Virtualization**:
   - Intel VT-x (also known as Intel VMX):
     - VMCS - Virtual Machine Control Structure.
     - Exit reasons.
