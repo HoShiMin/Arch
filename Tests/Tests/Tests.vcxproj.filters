@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\..\Arch\include\Arch\x86\Cpuid.h">
+      <Filter>Arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Arch\include\Arch\x86\Hyper-V.h">
+      <Filter>Arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Arch\include\Arch\x86\Interrupts.h">
+      <Filter>Arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Arch\include\Arch\x86\Intrinsics.h">
+      <Filter>Arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Arch\include\Arch\x86\Msr.h">
+      <Filter>Arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Arch\include\Arch\x86\Pte.h">
+      <Filter>Arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Arch\include\Arch\x86\Registers.h">
+      <Filter>Arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Arch\include\Arch\x86\Segmentation.h">
+      <Filter>Arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Arch\include\Arch\x86\Svm.h">
+      <Filter>Arch\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Arch\include\Arch\x86\Vmx.h">
+      <Filter>Arch\x86</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{1781a46c-c340-40ab-9647-8cf681f09ee8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arch">
+      <UniqueIdentifier>{09b22618-86e5-423a-a60c-c3a0520ebd01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Arch\x86">
+      <UniqueIdentifier>{2430961f-a95e-4777-8077-10921decb057}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
