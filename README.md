@@ -99,13 +99,13 @@ void test()
         if (cr4->layout.LA57)
         {
             // 5-Level paging:
-            const auto pml5pfn = cr3->paging5Level.PML4;
+            const auto pml5pfn = cr3->paging5Level.PML5;
             ...
         }
         else
         {
             // 4-Level paging:
-            const auto pml4pfn = cr3->paging4Level.PML5;
+            const auto pml4pfn = cr3->paging4Level.PML4;
             ...
         }
     }
