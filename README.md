@@ -21,6 +21,7 @@ It's a bit-perfect (and maybe the most complete in some cases) bunch of architec
   - TSS - Task State Segment.
   - Segment selector (format of CS, DS, GS, FS, ES, SS and TR registers).
   - Descriptor table register (IDTR, GDTR and LDTR registers).
+  - Descriptors (system- and user-segments and gates for all possible interpretations).
 * **System registers**:
   - EFlags.
   - Control registers: CR0, CR, CR3, CR4, CR8.
