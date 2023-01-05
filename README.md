@@ -105,7 +105,7 @@ void test()
         else
         {
             // 4-Level paging:
-            const auto pml4pfn = cr3->paging4Level.PML4;
+            const auto pml4pfn = cr3->paging4Level.PML5;
             ...
         }
     }
