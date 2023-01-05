@@ -2,7 +2,7 @@
 It's a bit-perfect (and maybe the most complete in some cases) bunch of architectural headers for i386/AMD64 platform written in C++17.
 
 ### 📜 Supported structures and layouts:
-* **Memory paging** with all possible regimes and page sizes:
+* **Memory paging** for all possible regimes and page sizes:
   - Regimes:
     - Legacy Non-PAE with and without CR4.PSE (4Kb and 4Mb pages).
     - Legacy PAE (4Kb and 2Mb pages).
