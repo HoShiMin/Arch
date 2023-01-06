@@ -114,7 +114,7 @@ void test()
 ```
 
  
-Well done! Let't try page traversal through a page table.  
+Well done! Let's try page traversal through a page table.  
 Suppose we're in long 4-Level paging mode and the page is presented - checks for presense of a page were omitted for the simplicity:
 ```cpp
 #include <ntifs.h>
