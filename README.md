@@ -133,7 +133,7 @@ unsigned long long getPhysicalAddress(void* virtualAddress)
     using LinearAddress = Pte::LinearAddress<k_mode>;
     using Tables = Pte::Tables<k_mode>;
 
-    const LinearAddress addr{ .raw = 0x00007FFF'F8000000 };
+    const LinearAddress addr{ .raw = reinterpret_cast<size_t>(virtualAddress) };
     const auto cr3Pfn = Regs::Native::Cr3::query()->paging4Level.PML4;
 
     const auto* const pml4e = phys2virt(Tables::pml4e(cr3Pfn, addr));
