@@ -40,7 +40,7 @@ It's a bit-perfect (and maybe the most complete in some cases) bunch of architec
     - MSR permission map.
     - VMENTRY configuration.
     - VMEXIT qualification.
-  - AMD-V (also known as AMD-V):
+  - AMD-V (also known as AMD SVM):
     - VMCB - Virtual Machine Control Block.
     - Exit reasons.
     - NPT - Nested Page Tables (also known as AMD-RVI) which are the same as normal page tables.
