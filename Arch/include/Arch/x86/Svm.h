@@ -565,29 +565,29 @@ enum class SvmExitCode
     VMEXIT_EXCP_UD,
     VMEXIT_EXCP_NM,
     VMEXIT_EXCP_DF,
-    VMEXIT_EXCP9,//Reserved
+    VMEXIT_EXCP9, // Reserved
     VMEXIT_EXCP_TS,
     VMEXIT_EXCP_NP,
     VMEXIT_EXCP_SS,
     VMEXIT_EXCP_GP,
     VMEXIT_EXCP_PF,
-    VMEXIT_EXCP15,//Reserved
+    VMEXIT_EXCP15, // Reserved
     VMEXIT_EXCP_MF,
     VMEXIT_EXCP_AC,
     VMEXIT_EXCP_MC,
     VMEXIT_EXCP_XF,
-    VMEXIT_EXCP20,//Reserved
-    VMEXIT_EXCP21,//Reserved
-    VMEXIT_EXCP22,//Reserved
-    VMEXIT_EXCP23,//Reserved
-    VMEXIT_EXCP24,//Reserved
-    VMEXIT_EXCP25,//Reserved
-    VMEXIT_EXCP26,//Reserved
-    VMEXIT_EXCP27,//Reserved
-    VMEXIT_EXCP28,//Reserved
+    VMEXIT_EXCP20, // Reserved
+    VMEXIT_EXCP21, // Reserved
+    VMEXIT_EXCP22, // Reserved
+    VMEXIT_EXCP23, // Reserved
+    VMEXIT_EXCP24, // Reserved
+    VMEXIT_EXCP25, // Reserved
+    VMEXIT_EXCP26, // Reserved
+    VMEXIT_EXCP27, // Reserved
+    VMEXIT_EXCP28, // Reserved
     VMEXIT_EXCP_VC,
     VMEXIT_EXCP_SX,
-    VMEXIT_EXCP31,//Reserved
+    VMEXIT_EXCP31, // Reserved
     VMEXIT_INTR,
     VMEXIT_NMI,
     VMEXIT_SMI,
