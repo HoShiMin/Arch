@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Registers.h"
 
 namespace Svm
 {
@@ -121,38 +122,38 @@ struct VmcbControlArea
         unsigned int raw;
         struct
         {
-            unsigned int InterceptionVector0 : 1;
-            unsigned int InterceptionVector1 : 1;
-            unsigned int InterceptionVector2 : 1;
-            unsigned int InterceptionVector3 : 1;
-            unsigned int InterceptionVector4 : 1;
-            unsigned int InterceptionVector5 : 1;
-            unsigned int InterceptionVector6 : 1;
-            unsigned int InterceptionVector7 : 1;
-            unsigned int InterceptionVector8 : 1;
-            unsigned int InterceptionVector9 : 1;
-            unsigned int InterceptionVector10 : 1;
-            unsigned int InterceptionVector11 : 1;
-            unsigned int InterceptionVector12 : 1;
-            unsigned int InterceptionVector13 : 1;
-            unsigned int InterceptionVector14 : 1;
-            unsigned int InterceptionVector15 : 1;
-            unsigned int InterceptionVector16 : 1;
-            unsigned int InterceptionVector17 : 1;
-            unsigned int InterceptionVector18 : 1;
-            unsigned int InterceptionVector19 : 1;
-            unsigned int InterceptionVector20 : 1;
-            unsigned int InterceptionVector21 : 1;
-            unsigned int InterceptionVector22 : 1;
-            unsigned int InterceptionVector23 : 1;
-            unsigned int InterceptionVector24 : 1;
-            unsigned int InterceptionVector25 : 1;
-            unsigned int InterceptionVector26 : 1;
-            unsigned int InterceptionVector27 : 1;
-            unsigned int InterceptionVector28 : 1;
-            unsigned int InterceptionVector29 : 1;
-            unsigned int InterceptionVector30 : 1;
-            unsigned int InterceptionVector31 : 1;
+            unsigned int InterceptionVectorDE : 1;
+            unsigned int InterceptionVectorDB : 1;
+            unsigned int InterceptionVectorNMI : 1;
+            unsigned int InterceptionVectorBP : 1;
+            unsigned int InterceptionVectorOF : 1;
+            unsigned int InterceptionVectorBR : 1;
+            unsigned int InterceptionVectorUD : 1;
+            unsigned int InterceptionVectorNM : 1;
+            unsigned int InterceptionVectorDF : 1;
+            unsigned int InterceptionVector9 : 1;//Reserved
+            unsigned int InterceptionVectorTS : 1;
+            unsigned int InterceptionVectorNP : 1;
+            unsigned int InterceptionVectorSS : 1;
+            unsigned int InterceptionVectorGP : 1;
+            unsigned int InterceptionVectorPF : 1;
+            unsigned int InterceptionVector15 : 1;//Reserved
+            unsigned int InterceptionVectorMF : 1;
+            unsigned int InterceptionVectorAC : 1;
+            unsigned int InterceptionVectorMC : 1;
+            unsigned int InterceptionVectorXF : 1;
+            unsigned int InterceptionVector20 : 1;//Reserved
+            unsigned int InterceptionVector21 : 1;//Reserved
+            unsigned int InterceptionVector22 : 1;//Reserved
+            unsigned int InterceptionVector23 : 1;//Reserved
+            unsigned int InterceptionVector24 : 1;//Reserved
+            unsigned int InterceptionVector25 : 1;//Reserved
+            unsigned int InterceptionVector26 : 1;//Reserved
+            unsigned int InterceptionVector27 : 1;//Reserved
+            unsigned int InterceptionVector28 : 1;//Reserved
+            unsigned int InterceptionVectorVC : 1;
+            unsigned int InterceptionVectorSX : 1;
+            unsigned int InterceptionVector31 : 1;//Reserved
         } layout;
     } InterceptExceptions;
 
@@ -423,12 +424,12 @@ struct VmcbStateSaveArea
     unsigned int Reserved1;
     unsigned long long Efer;
     unsigned char Reserved2[112];
-    unsigned long long Cr4;
-    unsigned long long Cr3;
-    unsigned long long Cr0;
-    unsigned long long Dr7;
-    unsigned long long Dr6;
-    unsigned long long Rflags;
+    Regs::Cr4 Cr4;
+    Regs::Cr3 Cr3;
+    Regs::Cr0 Cr0;
+    Regs::Dr7 Dr7;
+    Regs::Dr6 Dr6;
+    Regs::Rflags Rflags;
     unsigned long long Rip;
     unsigned char Reserved3[88];
     unsigned long long Rsp;
@@ -442,7 +443,7 @@ struct VmcbStateSaveArea
     unsigned long long SysenterCs;
     unsigned long long SysenterEsp;
     unsigned long long SysenterEip;
-    unsigned long long Cr2;
+    Regs::Cr2 Cr2;
     unsigned char Reserved5[32];
     unsigned long long GuestPat;     // Guest PAT - only used if nested paging enabled
     unsigned long long DbgCtl;       // Guest debug ctl MSR - only used if HW acceleration is enabled by VMCB.LBR_VIRTUALIZATION_ENABLE
