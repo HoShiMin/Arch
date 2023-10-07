@@ -152,7 +152,7 @@ struct VmcbControlArea
             unsigned int Vector27 : 1; // Reserved
             unsigned int HV : 1; // Hypervisor Injection Exception (event injection)
             unsigned int VC : 1; // VMM Communication Exception (virtualization event)
-            unsigned int SX : 1; // Security Exception (Security-sensitive event in host)
+            unsigned int SX : 1; // Security Exception (security-sensitive event in host)
             unsigned int Vector31 : 1; // Reserved
         } layout;
     } InterceptExceptions;
