@@ -1,6 +1,7 @@
 #pragma once
 
 
+
 namespace Svm
 {
 
@@ -121,38 +122,38 @@ struct VmcbControlArea
         unsigned int raw;
         struct
         {
-            unsigned int InterceptionVector0 : 1;
-            unsigned int InterceptionVector1 : 1;
-            unsigned int InterceptionVector2 : 1;
-            unsigned int InterceptionVector3 : 1;
-            unsigned int InterceptionVector4 : 1;
-            unsigned int InterceptionVector5 : 1;
-            unsigned int InterceptionVector6 : 1;
-            unsigned int InterceptionVector7 : 1;
-            unsigned int InterceptionVector8 : 1;
-            unsigned int InterceptionVector9 : 1;
-            unsigned int InterceptionVector10 : 1;
-            unsigned int InterceptionVector11 : 1;
-            unsigned int InterceptionVector12 : 1;
-            unsigned int InterceptionVector13 : 1;
-            unsigned int InterceptionVector14 : 1;
-            unsigned int InterceptionVector15 : 1;
-            unsigned int InterceptionVector16 : 1;
-            unsigned int InterceptionVector17 : 1;
-            unsigned int InterceptionVector18 : 1;
-            unsigned int InterceptionVector19 : 1;
-            unsigned int InterceptionVector20 : 1;
-            unsigned int InterceptionVector21 : 1;
-            unsigned int InterceptionVector22 : 1;
-            unsigned int InterceptionVector23 : 1;
-            unsigned int InterceptionVector24 : 1;
-            unsigned int InterceptionVector25 : 1;
-            unsigned int InterceptionVector26 : 1;
-            unsigned int InterceptionVector27 : 1;
-            unsigned int InterceptionVector28 : 1;
-            unsigned int InterceptionVector29 : 1;
-            unsigned int InterceptionVector30 : 1;
-            unsigned int InterceptionVector31 : 1;
+            unsigned int DE : 1; // Divide-by-Zero-Error (DIV, IDIV, AAM instructions)
+            unsigned int DB : 1; // Debug (instruction accessess and data accesses)
+            unsigned int NMI : 1; // Non-Maskable-Interrupt (external NMI signal)
+            unsigned int BP : 1; // Breakpoint (INT3 instruction)
+            unsigned int OF : 1; // Overflow (INTO instruction)
+            unsigned int BR : 1; // Bound-Range (BOUND instruction)
+            unsigned int UD : 1; // Invalid-Opcode
+            unsigned int NM : 1; // Device-Not-Available (x87 instructions)
+            unsigned int DF : 1; // Double-Fault (exception during the handling of another exception or interrupt)
+            unsigned int Vector9 : 1; // Coprocessor-Segment-Overrun (unsupported/reserved)
+            unsigned int TS : 1; // Invalid-TSS (task-state segment access and task switch)
+            unsigned int NP : 1; // Segment-Not-Present (segment register loads)
+            unsigned int SS : 1; // Stack (SS register loads and stack references)
+            unsigned int GP : 1; // General-Protection (memory accesses and protection checks)
+            unsigned int PF : 1; // Page-Fault (memory accesses when paging enabled)
+            unsigned int Vector15 : 1; // Reserved
+            unsigned int MF : 1; // x87 Floating-Point Exception-Pending (x87 floating-point instructions)
+            unsigned int AC : 1; // Alignment-Check (misaligned memory accesses)
+            unsigned int MC : 1; // Machine-Check (model specific)
+            unsigned int XF : 1; // SIMD Floating-Point (SSE floating-point instructions)
+            unsigned int Vector20 : 1; // Reserved
+            unsigned int CP : 1; // Control-Protection Exception (RET/IRET or other control transfer)
+            unsigned int Vector22 : 1; // Reserved
+            unsigned int Vector23 : 1; // Reserved
+            unsigned int Vector24 : 1; // Reserved
+            unsigned int Vector25 : 1; // Reserved
+            unsigned int Vector26 : 1; // Reserved
+            unsigned int Vector27 : 1; // Reserved
+            unsigned int HV : 1; // Hypervisor Injection Exception (event injection)
+            unsigned int VC : 1; // VMM Communication Exception (virtualization event)
+            unsigned int SX : 1; // Security Exception (Security-sensitive event in host)
+            unsigned int Vector31 : 1; // Reserved
         } layout;
     } InterceptExceptions;
 
